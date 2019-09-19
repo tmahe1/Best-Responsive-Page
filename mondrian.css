@@ -1,0 +1,77 @@
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	display: flex;
+}
+
+.wide-col {
+	width: 65%;
+	height: 100%;
+}
+
+.narrow-col {
+	width: 35%;
+	height: 100%;
+	display: block;
+}
+
+.box {
+	height: calc(100%/2);
+	width: 100%;
+}
+.blue {background-color: #BB6BF3;}
+.red {background-color: #817E7D;}
+.yellow {background-color: #6B7EF3;}
+/*.image {content: url("images/shaq.gif");}*/
+/*.image {content: url("images/houston.jpg");}*/
+@media only screen and (max-width: 750px) {
+	body {
+	display: block;
+	}
+	.wide-col {
+	width: 100%;
+	height: 50%;
+	background-color: #b0e0e6
+	}
+	.narrow-col {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	}
+	.yellow {background-color: #003366}
+	.red {background-color:#ffb6c1;}
+	.image {content: url("images/shaq.gif");}
+}
+/* in this media query, its changing the colors to the astros colos as well as making everything stack on top of eachother*/
+@media only screen and (max-width: 550px) {
+	body {
+		overflow: scroll;
+		display:block;
+	}
+	.narrow-col {
+		display: block;
+		height:65%;
+	}
+	.yellow {background-color:#F4911E;}
+	.red {background-color:#002D62;}
+	.blue {background-color: #EB6E1F;}
+	.image {content: url("images/houston.jpg");}
+}
+
+/* https://philipwalton.github.io/solved-by-flexbox/demos/vertical-centering/ */
+/* If you're using 'display: flex' this class can be used to easily center horizontally! */
+.center-horizontal {
+	align-items: center;
+	display:flex;	
+}
+/* If you're using 'display: flex' this class can be used to easily center vertically! */
+.center-vertical {
+	justify-content: center;
+	display:flex;
+}
+/* Keep your image from overflowing it's parent DIV */
+.contain-image {
+	max-height: 75%;
+	max-width: 75%;
+}
